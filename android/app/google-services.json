@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "492574004009",
+    "project_id": "open-diary-f0d92",
+    "storage_bucket": "open-diary-f0d92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492574004009:android:23e13d6d1823b8a17b5d38",
+        "android_client_info": {
+          "package_name": "com.example.open_diary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492574004009-djpb9bvv4rtffekp2mr2a6m48n89b4g7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.open_diary",
+            "certificate_hash": "4dd80d1dc23c17ef810dce6315d9360b19d7ad37"
+          }
+        },
+        {
+          "client_id": "492574004009-mt18f4ti6oqbnd0p1n23rcebk1n5horj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-ZOq_hzXCklwoGItlZRACTw_RWMEzaBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492574004009-mt18f4ti6oqbnd0p1n23rcebk1n5horj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
