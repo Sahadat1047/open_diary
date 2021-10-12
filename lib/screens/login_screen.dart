@@ -1,4 +1,5 @@
-import 'package:open_diary/screens/home_screen.dart';
+import 'package:open_diary/screens/Homepage.dart';
+
 import 'package:open_diary/screens/registration_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -115,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(
                         height: 200,
                         child: Image.asset(
-                          "assets/loon.png",
+                          "assets/images/loon.png",
                           fit: BoxFit.contain,
                         )),
                     SizedBox(height: 45),
@@ -162,10 +163,10 @@ class _LoginScreenState extends State<LoginScreen> {
       await _auth
           .signInWithEmailAndPassword(email: email, password: password)
           .then((uid) => {
-                Fluttertoast.showToast(msg: "Login Successful"),
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => HomeScreen())),
-              })
+        Fluttertoast.showToast(msg: "Login Successful"),
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => Homepage())),
+      })
           .catchError((e) {
         Fluttertoast.showToast(msg: e!.message);
       });

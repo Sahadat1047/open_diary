@@ -1,9 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:open_diary/model/user_model.dart';
-import 'package:open_diary/screens/home_screen.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:open_diary/screens/Homepage.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
@@ -206,7 +207,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     SizedBox(
                         height: 180,
                         child: Image.asset(
-                          "assets/logo.png",
+                          "assets/images/loon.png",
                           fit: BoxFit.contain,
                         )),
                     SizedBox(height: 45),
@@ -267,7 +268,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
     Navigator.pushAndRemoveUntil(
         (context),
-        MaterialPageRoute(builder: (context) => HomeScreen()),
-        (route) => false);
+        MaterialPageRoute(builder: (context) => Homepage()),
+            (route) => false);
   }
 }
