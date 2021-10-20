@@ -10,6 +10,7 @@ import 'package:open_diary/widget/navigation_drawer_widget.dart';
 class Homepage extends StatefulWidget {
   @override
   _HomepageState createState() => _HomepageState();
+
 }
 
 
@@ -23,9 +24,12 @@ class _HomepageState extends State<Homepage> {
     });
   }
   @override
+
   Widget build(BuildContext context) {
+
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      drawer: NavigationDrawerWidget(),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
@@ -41,7 +45,9 @@ class _HomepageState extends State<Homepage> {
                     return Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+
                         Container(
+
                           height: constraints.maxHeight * 0.9,
                           width: constraints.maxWidth * 0.20,
                           color: Colors.white,
@@ -873,7 +879,7 @@ class _HomepageState extends State<Homepage> {
         unselectedFontSize: 13.0,
       ),
 
-      drawer: NavigationDrawerWidget(),
+
     );
   }
 }
