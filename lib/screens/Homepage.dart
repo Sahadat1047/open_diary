@@ -1,16 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:flutter/services.dart';
 import 'package:open_diary/model/data.dart';
 import './detailsPage.dart';
+import 'package:open_diary/widget/navigation_drawer_widget.dart';
+
+
 
 class Homepage extends StatefulWidget {
   @override
   _HomepageState createState() => _HomepageState();
 }
 
+
+
 class _HomepageState extends State<Homepage> {
   int indx = 0;
+  int _selectedIndex = 0;
+  void _onItemTap(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -825,7 +836,46 @@ class _HomepageState extends State<Homepage> {
             ],
           ),
         ),
+
+
       ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+            ),
+            title: Text(
+              'Home',
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.all_inbox,
+            ),
+            title: Text(
+              'Subscription',
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.article,
+            ),
+            title: Text(
+              'Write',
+            ),
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        onTap: _onItemTap,
+        selectedFontSize: 13.0,
+        unselectedFontSize: 13.0,
+      ),
+
+      drawer: NavigationDrawerWidget(),
     );
   }
 }
+
+
